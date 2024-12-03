@@ -1,6 +1,8 @@
 import * as fs from "fs";
 
-const list = fs.readFileSync("input.txt", "utf8");
+const list = fs.readFileSync("./input.txt", "utf8");
+
+let start = new Date().getTime();
 
 const regex = /(\d+)\s+(\d+)/g; // doing this in case they try to be sneaky and mix tabs in.
 
@@ -30,5 +32,9 @@ for (let i = 0; i < listLeft.length; i++) {
     result += countRight[listLeft[i]] * listLeft[i];
   }
 }
+
+let end = new Date().getTime();
+
+console.log("Execution time: " + (end - start) + "ms");
 
 console.log(result); //24941624
