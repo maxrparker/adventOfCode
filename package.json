@@ -1,0 +1,15 @@
+{
+  "name": "adventofcode",
+  "version": "1.0.0",
+  "description": "A repository for storing Max's Advent of Code Node Solutions.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2"
+  }
+}
