@@ -4,9 +4,8 @@ const file = fs.readFileSync("./input.txt", "utf8");
 
 let start = new Date().getTime();
 
-const regex = /mul\(([0-9]{1,3}),([0-9]{1,3})\)/g;
-
 let match;
+const regex = /mul\(([0-9]{1,3}),([0-9]{1,3})\)/g;
 
 let result = 0;
 

@@ -4,9 +4,9 @@ const file = fs.readFileSync("./input.txt", "utf8");
 
 let start = new Date().getTime();
 
-const report = file.split("\n").map((line) => {
+const report = file.split("\n").map(line => {
   // this could be way faster but f it.
-  return line.split(" ").map((num) => parseInt(num));
+  return line.split(" ").map(num => parseInt(num));
 });
 
 let reportCount = 0;
@@ -24,20 +24,12 @@ for (let i = 0; i < report.length; i++) {
 
   for (let j = 0; j <= report[i].length - 1; j++) {
     if (asc === true) {
-      if (
-        report[i][j] > report[i][j + 1] ||
-        report[i][j] + 3 < report[i][j + 1] ||
-        report[i][j] == report[i][j + 1]
-      ) {
+      if (report[i][j] > report[i][j + 1] || report[i][j] + 3 < report[i][j + 1] || report[i][j] == report[i][j + 1]) {
         good = false;
         break;
       }
     } else {
-      if (
-        report[i][j] < report[i][j + 1] ||
-        report[i][j] > report[i][j + 1] + 3 ||
-        report[i][j] == report[i][j + 1]
-      ) {
+      if (report[i][j] < report[i][j + 1] || report[i][j] > report[i][j + 1] + 3 || report[i][j] == report[i][j + 1]) {
         good = false;
         break;
       }
